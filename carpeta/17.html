@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Chequeo</title>
+<script language="javascript1.3">
+function dividir() {
+    var x = parseFloat(document.form1.xx.value);
+    var y = parseFloat(document.form1.yy.value);
+    var a;
+
+    if (isNaN(x) || isNaN(y)) {
+        a = "Ingrese Números";
+    } else {
+        if (y == 0) {
+            a = "Error!!!";
+        } else {
+            a = x / y;
+        }
+    }
+    document.form1.z.value = a;
+}
+</script>
+</head>
+<body bgcolor="#FFFFDD" text="#000000">
+<form name="form1" method="post" action="">
+<table width="80%" border="0">
+<tr>
+<td align="center">Escriba el Valor de <b>X </b> <input type="text" name="xx"></td>
+</tr>
+<tr>
+<td align="center">Escriba el Valor de <b>Y </b> <input type="text" name="yy"></td>
+</tr>
+<tr>
+<td align="center">
+<input type="button" name="Divide" value="Dividir" onClick="dividir()">
+<input type="reset" name="Limpiar" value="Limpiar">
+</td>
+</tr>
+<tr>
+<td align="center"><b>División entre X/Y</b>
+<input type="text" name="z" style="background-color: #000000; color: #00cc00;">
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
